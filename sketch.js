@@ -3,8 +3,8 @@ function setup() {
 }
 
 let x_coord = 10;
-let y_coord = 180;
-let y_legend = 90;
+let y_coord = 200;
+let y_legend = 100;
 
 let country = ['United States', 'China', 'Saudi Arabia', 'India', 'France', 'Russia', 'United Kingdom', 'Germany', 'Japan', 'South Korea'];
 let militarySpending = [649, 250, 67.6, 66.5, 63.8, 61.4, 50, 49.5, 46.6, 43.1];
@@ -14,11 +14,33 @@ let importRank = [13, 3, 1, 4, 31, "n/a", 18, 78, 11, 7];
 function draw() {
   background('rgb(51, 51, 51)');
   textFont('Liberation Mono');
+  
+  // Top legend
+  textSize(13);
+  noStroke();
+  fill('#f9e861');
+  square(10, 5, 20, 5);
+  fill('#ffffff');
+  text("Military spending in 2018 ($ b)", 50, 20);
+  stroke('#e0556e');
+  line(350, 15, 380, 15);
+  text("Arms exports rank in 2018", 400, 20);
+  stroke('#bc53ba');
+  line(650, 15, 680, 15);
+  text("Arms imports rank in 2018", 700, 20);
+  noStroke();
+  textSize(11);
+  text("Source: Stockholm International Peace Research Institute (sipri.org)", 10, 45);
+  strokeWeight(1);
+  stroke('#ffffff');
+  line(0, 70, windowWidth, 70);
+  
   textSize(16);
   
   for(i=0; i < country.length; i++) {
      
     if(i == 0) {
+      noStroke();
       // square
       fill('#f9e861');
       square(x_coord, y_coord, militarySpending[i] * 0.25, 5);

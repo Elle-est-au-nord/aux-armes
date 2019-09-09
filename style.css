@@ -1,7 +1,53 @@
 html, body {
   margin: 0;
   padding: 0;
+  max-height: 100vh;
+  background-color: rgb(51, 51, 51);
+  font-family: sans-serif;
 }
 canvas {
   display: block;
+  margin: 6% 0 0 25%;
+}
+
+header {
+    height: 6%;
+    min-width: 100vh;
+    padding-left: 40%;
+    background-color: rgba(114, 159, 207, 0.7);
+    font-family: 'Liberation Mono';
+}
+.eean-link img {
+    width: 2.5%;
+}
+.eean-link a{
+    text-decoration: none;
+    color: white;
+}
+.eean-link a:hover {
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+.eean-link span {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courgette', cursive;
+}
+.intro{
+    width: 60%;
+    margin: 3% 0 0 25%;
+    line-height: normal;
+    font-family: 'Liberation Mono';
+    color: white;
+}
+.intro a {
+  text-decoration: none;
+}
+
+/* Don't center canvas on small screens */
+@media (max-width: 991.98px){
+    canvas {
+    display: block;
+    margin: 5% 0 0 5%;
+    }
 }
