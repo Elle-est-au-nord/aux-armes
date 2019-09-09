@@ -7,7 +7,7 @@ html, body {
 }
 canvas {
   display: block;
-  margin: 6% 0 0 21%;
+  margin: 6% 0 0 19%;
 }
 
 header {
@@ -35,7 +35,7 @@ header {
 }
 .intro{
     width: 60%;
-    margin: 3% 0 0 21%;
+    margin: 3% 0 0 20%;
     line-height: normal;
     font-family: 'Liberation Mono';
     color: white;
